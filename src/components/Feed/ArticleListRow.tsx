@@ -41,17 +41,12 @@ export const ArticleListRow = ({
   const [publisher, setPublisher] = useState(article.publisher);
   const [IsErrorAlert, setIsErrorAlertVisible] = useState(false);
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
-
   const handleToggleEdit = () => {
     setIsEditing(!isEditing);
   };
 
   const closeAlert = () => {
     setIsErrorAlertVisible(false);
-    refreshPage();
   };
 
   const handleSaveChanges = async () => {

@@ -1,3 +1,7 @@
+# Description
+
+This repo contains the codebase for a news feed web application, where users are able to create, update, fetch, and display news articles. The frontend is developed using TypeScript and React, with Chakra UI providing a clean and modern interface. Axios is used as the API library for making HTTP requests to the backend. The backend utilizes an Express server and an SQLite database to handle user interactions and data storage.
+
 # Steps to run app
 
 At the root of the project
