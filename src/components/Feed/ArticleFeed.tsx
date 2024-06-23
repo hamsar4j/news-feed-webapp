@@ -9,10 +9,14 @@ import {
   Heading,
   Flex,
   ButtonGroup,
+  Stat,
+  StatLabel,
+  StatNumber,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { RefreshButton, AddButton } from "../Buttons/Buttons";
 import { Article } from "../../types";
+import { LoadingIcon } from "../Icons/LoadingIcon";
 
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -63,6 +67,8 @@ export const ArticlesFeed = () => {
     window.location.reload();
   };
 
+  if (loading) return <LoadingIcon />;
+
   return (
     <>
       <Box mb={10}>
@@ -70,7 +76,11 @@ export const ArticlesFeed = () => {
           <Heading bgGradient="linear(to-r, blue.300, blue.600)" bgClip="text">
             News Feed
           </Heading>
-          <ButtonGroup>
+          <ButtonGroup alignItems="center">
+            <Stat pr="1rem">
+              <StatLabel>Articles Count</StatLabel>
+              <StatNumber>{articles.length}</StatNumber>
+            </Stat>
             <IconButton
               aria-label="toggle color mode"
               icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}

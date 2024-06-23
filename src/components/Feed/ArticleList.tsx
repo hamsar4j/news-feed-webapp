@@ -5,7 +5,6 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { Card, CardBody, SimpleGrid } from "@chakra-ui/react";
 
 export const ArticleList = ({
-  loading,
   articles,
   handleRemoveArticle,
 }: {
@@ -13,7 +12,6 @@ export const ArticleList = ({
   articles: Article[];
   handleRemoveArticle: Function;
 }) => {
-  if (loading) return <p>Articles List is Loading...</p>;
   return (
     <SimpleGrid spacing={4} columns={1}>
       {articles.length > 0 ? (
