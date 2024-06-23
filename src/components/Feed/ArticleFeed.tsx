@@ -12,6 +12,7 @@ import {
   Stat,
   StatLabel,
   StatNumber,
+  Tooltip,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { RefreshButton, AddButton } from "../Buttons/Buttons";
@@ -73,7 +74,12 @@ export const ArticlesFeed = () => {
     <>
       <Box mb={10}>
         <Flex justifyContent="space-between" alignItems="center">
-          <Heading bgGradient="linear(to-r, blue.300, blue.600)" bgClip="text">
+          <Heading
+            bgGradient="linear(to-r, blue.300, blue.600)"
+            bgClip="text"
+            onClick={refreshPage}
+            _hover={{ cursor: "pointer" }}
+          >
             News Feed
           </Heading>
           <ButtonGroup alignItems="center">
@@ -81,12 +87,14 @@ export const ArticlesFeed = () => {
               <StatLabel>Articles Count</StatLabel>
               <StatNumber>{articles.length}</StatNumber>
             </Stat>
-            <IconButton
-              aria-label="toggle color mode"
-              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              isRound={true}
-              onClick={toggleColorMode}
-            />
+            <Tooltip label="Change Color Mode" fontSize="xs">
+              <IconButton
+                aria-label="toggle color mode"
+                icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+                isRound={true}
+                onClick={toggleColorMode}
+              />
+            </Tooltip>
             <RefreshButton onClick={refreshPage} />
           </ButtonGroup>
         </Flex>

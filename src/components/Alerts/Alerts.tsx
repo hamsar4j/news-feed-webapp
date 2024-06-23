@@ -2,7 +2,6 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
-  // AlertDescription,
   CloseButton,
   ButtonProps,
   Box,
@@ -13,7 +12,7 @@ export const ErrorAlert = (props: ButtonProps) => {
     <Alert status="error" borderRadius="md">
       <AlertIcon />
       <Box>
-        <AlertTitle>The input fields cannot be empty</AlertTitle>
+        <AlertTitle>The input fields cannot be empty!</AlertTitle>
       </Box>
       <CloseButton
         alignSelf="flex-start"

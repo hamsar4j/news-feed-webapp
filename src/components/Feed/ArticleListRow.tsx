@@ -116,6 +116,7 @@ export const ArticleListRow = ({
               value={title}
               isDisabled={!isEditing}
               onChange={(newValue) => setTitle(newValue)}
+              placeholder="Title"
             >
               <EditablePreview />
               <EditableInput />
@@ -133,6 +134,7 @@ export const ArticleListRow = ({
                 value={summary}
                 isDisabled={!isEditing}
                 onChange={(newValue) => setSummary(newValue)}
+                placeholder="Summary"
               >
                 <EditablePreview />
                 <EditableTextarea />
@@ -153,6 +155,7 @@ export const ArticleListRow = ({
               value={publisher}
               isDisabled={!isEditing}
               onChange={(newValue) => setPublisher(newValue)}
+              placeholder="Publisher"
             >
               <EditablePreview />
               <EditableInput />
