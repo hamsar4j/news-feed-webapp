@@ -19,3 +19,7 @@ Main Feed:
 Form:
 
 ![form-page-dark](https://github.com/hamsar4j/news-feed-webapp/assets/123620760/e76ce2e2-5488-45e8-93a8-e0caa8c902bd)
+
+Inline Editing:
+
+<img width="1100" alt="Inline_Editing" src="https://github.com/hamsar4j/news-feed-webapp/assets/123620760/f63928f9-8847-4b8c-b53a-e38c656b723e">
